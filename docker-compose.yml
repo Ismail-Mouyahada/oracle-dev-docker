@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  oracle-db:
+    image: gvenzl/oracle-free:latest
+    container_name: oracle-dev
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    environment:
+      - ORACLE_PASSWORD=admin123
+    volumes:
+      - ./data:/opt/oracle/oradata
